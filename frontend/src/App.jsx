@@ -1,21 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-function Home() {
-  return <h2>Home Page</h2>;
-}
-
-function Cart() {
-  return <h2>Cart Page</h2>;
-}
+import Navbar from "./components/Navbar";
+import Menu from "./pages/Menu";
+import Cart from "./pages/Cart";
+import Analytics from "./pages/Analytics";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Navbar />
+        <div className="container mt-4">
+          <Routes>
+            <Route path="/" element={<Menu />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/analytics" element={<Analytics />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
