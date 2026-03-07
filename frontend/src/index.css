@@ -652,14 +652,9 @@ a {
   color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: 22px;
-
-  /* clamp to two lines */
-  display: -webkit-box;      /* legacy webkit */
-  display: box;              /* spec‑compliant */
-  -webkit-line-clamp: 2;     /* legacy webkit */
-  line-clamp: 2;             /* standard property */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  box-orient: vertical;      /* spec‑compliant */
   overflow: hidden;
 }
 
