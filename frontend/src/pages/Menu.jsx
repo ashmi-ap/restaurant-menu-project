@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext, useRef } from "react";
 import API from "../api";
-import MenuItem from "../../../src/components/MenuItem";
-import { CartContext } from "../../../src/context/CartContext";
+import MenuItem from "../components/MenuItem";
+import { CartContext } from "../context/CartContext";
 
 // 10 rich sample items shown when API has no data
 const SAMPLE_ITEMS = [
